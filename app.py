@@ -89,11 +89,17 @@ def download():
             }],
         })
     else:
+        # Prefer mp4 video + m4a audio to avoid glitchy merges in some players
         ydl_opts.update({
-            'format': f'bestvideo[height={resolution}]+bestaudio/best' if resolution else 'bestvideo+bestaudio/best',
+            'format': (
+                f"bestvideo[ext=mp4][height={resolution}]+bestaudio[ext=m4a]/"
+                f"best[ext=mp4][height={resolution}]/"
+                "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]"
+            ) if resolution else
+            "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]",
             'postprocessors': [{
                 'key': 'FFmpegVideoConvertor',
-                'preferedformat': 'mp4',
+                'preferedformat': 'mp4',  # yt-dlp uses the legacy misspelling
             }],
             'merge_output_format': 'mp4',
             'keepvideo': False
