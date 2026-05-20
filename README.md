@@ -19,7 +19,7 @@ A simple and efficient YouTube downloader that allows users to download videos i
 
 ---
 ## Preview 
-<img src=https://github.com/CodeByPrakash/My_YT_Downloader/preview.jpg)></img>
+![Preview](https://github.com/CodeByPrakash/My_YT_Downloader/raw/main/preview.jpg)
 
 ## **Prerequisites** 🔧
 
