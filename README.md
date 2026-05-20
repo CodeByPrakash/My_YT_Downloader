@@ -5,6 +5,7 @@ A simple and efficient YouTube downloader that allows users to download videos i
 ---
 
 ## **Table of Contents** 📋
+[Preview](#Preview-)
 1. [Prerequisites](#prerequisites-)
 2. [Setup Instructions](#setup-instructions-)
    - [Create a Virtual Environment](#create-a-virtual-environment-)
